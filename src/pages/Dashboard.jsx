@@ -92,7 +92,7 @@ const Dashboard = () => {
 
                     {/* Logo */}
                     <div className="flex items-center gap-2 px-6 py-4 border-b border-gray-200">
-                        <div className="bg-[#EBC9A4] text-white px-2 py-1 rounded-md font-semibold">DX</div>
+                        <div className="bg-[#DE8628] text-white px-2 py-1 rounded-md font-semibold">DX</div>
                         <div>
                             <h1 className="text-lg font-bold text-gray-800">DevXcript</h1>
                             <p className="text-sm text-gray-500">Student Portal</p>
@@ -175,7 +175,7 @@ const Dashboard = () => {
                     <div className="flex items-center space-x-4">
                         <button className="text-gray-500 lg:block md:block hidden relative hover:bg-gray-100 rounded p-2">
                             <HiOutlineBell className="w-6 h-6" />
-                            <div className="absolute top-[5px] right-[5px] w-[7px] h-[7px] bg-[#EBC9A4] rounded-full"></div>
+                            <div className="absolute top-[5px] right-[5px] w-[7px] h-[7px] bg-[#DE8628] rounded-full"></div>
                         </button>
 
                         <div className="relative">

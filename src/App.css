@@ -19,32 +19,34 @@
 }
 
 /*********************************************************/
+ 
 .loader {
-  width: fit-content;
-  font-size: 40px;
-  font-family: monospace;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #0000;
-  -webkit-text-stroke: 1px #00a3efa0;
-  background: conic-gradient(#000000 0 0) 0/0 100% no-repeat text;
-  animation: l11 2s steps(8, jump-none) infinite;
+  --d: 22px;
+  width:  8px;
+  height: 8px;
+  border-radius: 50%;
+  color: #de8628;
+  box-shadow:
+    calc(1*var(--d)) calc(0*var(--d)) 0 0,
+    calc(0.707*var(--d)) calc(0.707*var(--d)) 0 1px,
+    calc(0*var(--d)) calc(1*var(--d)) 0 2px,
+    calc(-0.707*var(--d)) calc(0.707*var(--d)) 0 3px,
+    calc(-1*var(--d)) calc(0*var(--d)) 0 4px,
+    calc(-0.707*var(--d)) calc(-0.707*var(--d))0 5px,
+    calc(0*var(--d)) calc(-1*var(--d)) 0 6px;
+  animation: l27 1s infinite steps(8);
 }
 
-.loader:before {
-  content: "Loading";
-}
-
-@keyframes l11 {
-  to {
-    background-size: 100% 100%
+@keyframes l27 {
+  100% {
+    transform: rotate(1turn)
   }
 }
 
 /* *********************************************** */
 
 /* bg-[#76CDDF] */
-html{
+html {
   background-color: #00A4EF #00a3efa0;
   background-color: #EBC9A4 #de8628;
 }
