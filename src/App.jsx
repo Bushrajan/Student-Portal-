@@ -62,7 +62,7 @@ const App = () => {
         />
         <Route
           path="*"
-          element={user ? <Navigate to="/dashboard" replace /> : <NotFound />}
+          element={user ? <NotFound /> : <Navigate to="/login" replace />}
         />
       </Routes>
     </Router>
