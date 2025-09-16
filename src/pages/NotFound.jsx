@@ -8,7 +8,7 @@ const NotFound = () => {
             <div className="w-full max-w-md text-center">
                 <div className="mb-8">
                     <img src="/404page.jpg"  />
-                    <span className='bg-[#76CDDF] mt-5 rounded text-white font-bold text-3xl p-3'>
+                    <span className='bg-[#DE8628] mt-5 rounded text-white font-bold text-3xl p-3'>
                         <Link to="/dashboard" >Go To Home</Link>
                     </span>
                 </div>
