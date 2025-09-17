@@ -106,7 +106,7 @@ const Cources = () => {
                 </div>
 
                 {/* Stats Grid */}
-                <div className="flex flex-wrap  gap-4 text-sm text-gray-700">
+                <div className="flex flex-wrap lg:justify-start justify-center items-center gap-4 text-sm text-gray-700">
                     <div className=" bg-gray-50 w-[120px]   hover:bg-gray-50 p-3 rounded-md text-center">
                         <p>Total Courses</p>
                         <p className="font-semibold text-[15px] text-[#00A4EF] lg:text-[21px]">{summary.totalCourses}</p>
@@ -139,7 +139,7 @@ const Cources = () => {
                             <button
                                 key={type}
                                 onClick={() => setFilter(type)}
-                                className={`border p-2 rounded text-sm ${filter === type
+                                className={`border p-2 rounded mx-auto text-sm ${filter === type
                                     ? "border-[#de8628] text-[#de8628]"
                                     : "text-gray-500 hover:text-[#de8628] hover:border-[#de8628]"
                                     }`}
@@ -151,7 +151,7 @@ const Cources = () => {
                 </div>
 
                 {/* Course Cards */}
-                <div className="space-y-4 flex flex-wrap gap-5 mx-auto justify-start md:p-5  pt-5">
+                <div className="space-y-4 flex flex-wrap gap-5 mx-auto lg:justify-start justify-center items-center md:p-5  pt-5">
                     {filteredCourses.map((course, index) => (
                         <motion.div
                             key={index}

@@ -62,7 +62,7 @@ const App = () => {
         />
         <Route
           path="*"
-          element={user ? <NotFound /> : <Navigate to="/login" replace />}
+          element={user ? <Navigate to="/login" replace /> : <Navigate to="/login" replace />}
         />
       </Routes>
     </Router>

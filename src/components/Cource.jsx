@@ -79,9 +79,9 @@ const Cources = () => {
              className="max-w-7xl mx-auto"
         >
             <div className="bg-white rounded-xl shadow-md p-2 pt-8 mt-5 w-full mx-auto">
-                <div className="flex gap-3 lg:justify-start ms-5 justify-center items-center mb-4">
+                <div className="flex gap-3 lg:justify-start  mx-auto ms-5 items-center mb-4">
 
-                    <div className="p-2 px-  py-     bg-[#ebc9a489] rounded-xl shadow-lg">
+                    <div className="p-2 bg-[#ebc9a489] rounded-xl shadow-lg">
                         <LuBookOpen color="#de8628" className=" w-5 h-5" />
                     </div>
                     <div className="text-center">
@@ -93,7 +93,7 @@ const Cources = () => {
                     </div>
                 </div>
                 {/* Course Cards */}
-                <div className="space-y-4 flex flex-wrap gap-5 mx-auto justify-start md:p-5 pt-5">
+                <div className="space-y-4 flex flex-wrap gap-5 mx-auto  lg:justify-start justify-center items-center md:p-5 pt-5">
                     {courseData.map((course, index) => (
                         <motion.div
                             key={index}

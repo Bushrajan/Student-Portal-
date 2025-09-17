@@ -19,8 +19,10 @@ import Results from "./Results";
 import DateSheet from "./DateSheet";
 import Invoices from "./Invoices";
 import Attendance from "./Attendance";
-import Home  from "./Home";
+import Home from "./Home";
+import { Profile } from "./Profile";
 import { LogOut } from "lucide-react";
+import { CgProfile } from "react-icons/cg";
 
 const Dashboard = () => {
     const [sideBar, setSideBar] = useState(false);
@@ -37,6 +39,7 @@ const Dashboard = () => {
         { name: "Date Sheet", icon: <LuCalendarDays /> },
         { name: "Invoices", icon: <LiaFileInvoiceSolid /> },
         { name: "Attendance", icon: <TbCheckbox /> },
+        { name: "Profile", icon: <CgProfile /> },
     ];
 
     const handleLogout = async () => {
@@ -66,6 +69,7 @@ const Dashboard = () => {
                 {activeTab === "Date Sheet" && <DateSheet />}
                 {activeTab === "Invoices" && <Invoices />}
                 {activeTab === "Attendance" && <Attendance />}
+                {activeTab === "Profile" && <Profile />}
             </motion.div>
         );
     };
@@ -190,7 +194,7 @@ const Dashboard = () => {
                                 />
                                 <span className="lg:flex flex-col md:flex hidden">
                                     <span className="font-semibold text-[13px]">
-                                        {user?.email ? user.email.split("@")[0] : "John Doe"}
+                                        {user?.email ? user.email.split('@')[0].charAt(0).toUpperCase() + user.email.split('@')[0].slice(1).toLowerCase() : "John Doe"}
                                     </span>
                                     <span className="text-[11px]">
                                         {user?.email || "johndoe@gmail.com"}
@@ -204,7 +208,7 @@ const Dashboard = () => {
                                         onClick={handleLogout}
                                         className="flex gap-3 px-4 py-2 text-sm text-red-600 hover:bg-gray-100 w-full text-left"
                                     >
-                                        <LogOut className="w-5"/>
+                                        <LogOut className="w-5" />
                                         Logout
                                     </button>
                                 </div>

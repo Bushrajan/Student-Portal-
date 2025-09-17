@@ -8,7 +8,7 @@ import {
 } from "firebase/auth";
 import { auth } from "../firebase";
 import { setUser } from "../store/authSlice";
-import { FaGoogle, FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const Auth = () => {
@@ -32,7 +32,7 @@ const Auth = () => {
             dispatch(setUser({
                 uid: user.uid,
                 email: user.email,
-                photoURL: user.photoURL || null,
+                photoURL: user.photoURL || "/p1.png",
                 provider: "email",
             }));
 
@@ -64,7 +64,7 @@ const Auth = () => {
     return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-300 lg:px-4 md:px-4 p-2">
             <div className="max-w-md w-full bg-white lg:p-8 md:p-8 p-4 rounded-xl shadow-2xl">
-                <h2 className="lg:text-3xl md:text-3xl text-[20px] text-center font-bold text-[#00A4EF] mb-2">
+                <h2 className="lg:text-3xl md:text-3xl text-[20px] text-center font-bold text-[#de8628] mb-2">
                     {isSignup ? "Create an Account for DevXcript Portal" : "Login to DevXcript Portal"}
                 </h2>
                 <p className="text-sm text-center text-gray-500 mb-6">
@@ -81,7 +81,7 @@ const Auth = () => {
                             placeholder="info@gmail.com"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="w-full lg:px-4 md:px-4 px-2 lg:py-2 md:py-2 py-1 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400"
+                            className="w-full lg:px-4 md:px-4 px-2 lg:py-2 md:py-2 py-1 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#de8628]"
                         />
                     </div>
 
@@ -93,7 +93,7 @@ const Auth = () => {
                                 placeholder="Enter your password"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
-                                className="w-full lg:px-4 md:px-4 px-2 lg:py-2 md:py-2 py-1 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400"
+                                className="w-full lg:px-4 md:px-4 px-2 lg:py-2 md:py-2 py-1 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#de8628]"
                             />
                             <span
                                 onClick={() => setShowPassword(!showPassword)}
@@ -106,7 +106,7 @@ const Auth = () => {
 
                     <button
                         type="submit"
-                        className={`w-full lg:px-4 md:px-4 px-2 lg:py-2 md:py-2 py-1 rounded-md text-white font-semibold transition ${isSignup ? "bg-[#00A4EF] hover:bg-[#00a3efa0]" : "bg-[#00A4EF] hover:bg-[#00a3efa0]"
+                        className={`w-full lg:px-4 md:px-4 px-2 lg:py-2 md:py-2 py-1 rounded-md text-white font-semibold transition ${isSignup ? "bg-[#de8628] hover:bg-[#b76309]" : "bg-[#de8628] hover:bg-[#b76309]"
                             }`}
                     >
                         {isSignup ? "Sign Up" : "Sign In"}
@@ -136,12 +136,12 @@ const Auth = () => {
                     {isSignup ? (
                         <>
                             Already have an account?{" "}
-                            <a href="/login" className="text-[#00A4EF] font-medium hover:underline">Sign in</a>
+                            <a href="/login" className="text-[#de8628] font-medium hover:underline">Sign in</a>
                         </>
                     ) : (
                         <>
                             Don’t have an account?{" "}
-                            <a href="/signup" className="text-[#00A4EF] font-medium hover:underline">Sign up</a>
+                            <a href="/signup" className="text-[#de8628] font-medium hover:underline">Sign up</a>
                         </>
                     )}
                 </p>
