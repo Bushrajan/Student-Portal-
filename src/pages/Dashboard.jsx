@@ -187,11 +187,13 @@ const Dashboard = () => {
                                 onClick={() => setShowLogout(!showLogout)}
                                 className="flex gap-4 hover:bg-gray-100 p-2 rounded items-center"
                             >
-                                <img
-                                    src={user?.photoURL || "/p1.png"}
-                                    alt="user"
-                                    className="w-8 h-8 border-3 border-[#DE8628] rounded-full"
-                                />
+                                <span className="p-1 border-3 border-[#DE8628] rounded-full">
+                                    <img
+                                        src={user?.photoURL || "/p1.png"}
+                                        alt="user"
+                                        className="w-6 h-6  rounded-full"
+                                    />
+                                </span>
                                 <span className="lg:flex flex-col md:flex hidden">
                                     <span className="font-semibold text-[13px]">
                                         {user?.email ? user.email.split('@')[0].charAt(0).toUpperCase() + user.email.split('@')[0].slice(1).toLowerCase() : "John Doe"}
