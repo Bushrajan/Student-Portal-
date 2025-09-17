@@ -190,7 +190,7 @@ const Dashboard = () => {
                                 <img
                                     src={user?.photoURL || "/p1.png"}
                                     alt="user"
-                                    className="w-8 h-8 rounded-full"
+                                    className="w-8 h-8 border-3 border-[#DE8628] rounded-full"
                                 />
                                 <span className="lg:flex flex-col md:flex hidden">
                                     <span className="font-semibold text-[13px]">
