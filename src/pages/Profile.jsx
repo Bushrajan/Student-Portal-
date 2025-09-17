@@ -20,8 +20,8 @@ export const Profile = () => {
         : "John Doe";
 
     const handleLogout = () => {
-        dispatch(logoutUser()); // Clear Redux state
-        navigate("/login");     // Redirect to login
+        dispatch(logoutUser()); 
+        navigate("/login");      
     };
 
     motion
